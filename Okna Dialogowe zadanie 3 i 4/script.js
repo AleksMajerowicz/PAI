@@ -14,9 +14,12 @@ prostokat = confirm("Jeżeli chcesz wyświetlić prostokąt z gwiazdek, kliknij 
 
 if(prostokat)
 {
-    for(var i = 0; i < 5; i++)
+    y = parseInt(prompt("Podaj wysokość"))
+    x = parseInt(prompt("Podaj szerokość"))
+
+    for(var i = 0; i < y; i++)
     {
-        for(var j = 0; j < 30; j++)
+        for(var j = 0; j < x; j++)
         {
             document.write("*")
         }
@@ -25,7 +28,9 @@ if(prostokat)
 }
 else
 {
-    for(var i = 0; i < 30; i++)
+    x = parseInt(prompt("Podaj długość"))
+
+    for(var i = 0; i < x; i++)
     {
         document.write("*")
     }
