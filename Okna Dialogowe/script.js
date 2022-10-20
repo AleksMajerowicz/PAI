@@ -11,8 +11,6 @@ else
 var x = parseInt(prompt("Podaj szerokość Prosotkata"))
 var y = parseInt(prompt("Podaj wysokość Prosotkata"))
 
-
-
 for(i = 0; i < y; i++)
 {
     for(j = 0; j < x; j++)
