@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function PytanieOdnosnieGier ()
+            {
+                var gra = confirm("Czy grasz w Gry?")
+
+                if(gra)
+                {
+                    var czyGrasz = prompt("Jaka jest twoja ulubiona Gra Komputerowa?")
+                    var pytanie = parseInt(prompt("Ile godzin grałeś w tą grę?"))
+
+                    if(pytanie < 100)
+                    {
+                        document.write("Jesteś w tym początkujący")
+                    }
+                    else if( pytanie >= 100 && pytanie < 300)
+                    {
+                        document.write("Poznałeś już tą grę")
+                    }
+                    else if(pytanie >= 300)
+                    {
+                        document.write("Jesteś w tym Mistrzem")
+                    }
+                }
+                else
+                {
+                    document.write("Bardzo Dobrze,Tak Trzymaj")
+                }
+            }
+
+            PytanieOdnosnieGier()
+        </script>
+    </head>
+</html>
