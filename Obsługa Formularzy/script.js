@@ -48,3 +48,23 @@ function writeFormularz()
     }
     document.getElementById("pytanie4").textContent = value
 }
+
+var procentZaplaty = 0
+
+function Wylicz()
+{
+    let kwota = parseFloat(document.getElementById("kwota").value);
+    let miesiac = parseInt(document.getElementById("miesiac").value);
+    let procent = parseFloat(document.getElementById("procent").value);
+
+    let wiadomosc = document.getElementById("wiadomosc");
+
+    oblicz(kwota,procent,miesiac)
+        
+    wiadomosc.textContent += document.write("Miesięczna zapłata Wynosi: " + procentZaplaty + " zł <br>");
+}
+
+function oblicz(k,p,m)
+{
+    procentZaplaty = (k/m) + (k * ((p/100) / m));
+}
