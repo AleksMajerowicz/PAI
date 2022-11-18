@@ -79,3 +79,49 @@ function Wyswietl()
         alert(text);
     }
 }
+
+function Oblicz()
+{
+    let a = parseInt(document.getElementById("a").value);
+    let b = parseInt(document.getElementById("b").value);
+    var operacja = document.getElementsByName('Operacje');
+    var i = 0
+
+    for(var i = 0; i < operacja.length; i++)
+    {
+        if(operacja[i].checked)
+        {
+           switch(operacja[i].value)
+           {
+                case "+":
+                    alert(a + b)
+                    break
+                case "-":
+                    alert(a - b)
+                    break
+                case "*":
+                    alert(a * b)
+                    break
+                case "/":
+                    if(b != 0)
+                    {
+                        alert(a / b);
+                    }
+                    else
+                    {
+                        alert("Nie dizleimy przez 0! Podaj Inną liczbę!");
+                    }
+                    break
+           }
+        }
+        else
+        {
+            i += 1
+        }
+    }
+
+    if(i == 4)
+    {
+        alert("Nie podałeś zadnej Operacji!");
+    }
+}
