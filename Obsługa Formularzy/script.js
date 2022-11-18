@@ -68,3 +68,14 @@ function oblicz(k,p,m)
 {
     procentZaplaty = (k/m) + (k * ((p/100) / m));
 }
+
+function Wyswietl()
+{
+    text = document.getElementById("Text").value;
+    ilosc = parseInt(document.getElementById("Ilosc").value)
+
+    for(var i =0; i < ilosc; i++)
+    {
+        alert(text);
+    }
+}
