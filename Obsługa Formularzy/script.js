@@ -58,6 +58,17 @@ function writeFormularz()
 //Oprocenotwanie
 //-----------------------------------------------------------------------------------------------------------
 
+function Wyswietl()
+{
+    textVaule = document.getElementById("Text").value;
+    ilosc = parseInt(document.getElementById("Ilosc").value);
+
+    for(var i = 0; i < ilosc; i++)
+    {
+        alert(textVaule);
+    }
+}
+
 var procentZaplaty = 0
 
 function Wylicz()
