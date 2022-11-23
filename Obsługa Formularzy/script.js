@@ -1,3 +1,4 @@
+//-----------------------------------------------------------------------------------------------------------
 function logowanie()
 {
     var login = document.getElementById("Login")
@@ -6,7 +7,10 @@ function logowanie()
     document.getElementById("login").textContent = login.value
     document.getElementById("haslo").textContent = haslo.value
 }
+//-----------------------------------------------------------------------------------------------------------
 
+
+//-----------------------------------------------------------------------------------------------------------
 function writeFormularz()
 {
     document.getElementById("pytanie1").textContent = null
@@ -48,6 +52,11 @@ function writeFormularz()
     }
     document.getElementById("pytanie4").textContent = value
 }
+//-----------------------------------------------------------------------------------------------------------
+
+
+//Oprocenotwanie
+//-----------------------------------------------------------------------------------------------------------
 
 var procentZaplaty = 0
 
@@ -68,60 +77,34 @@ function oblicz(k,p,m)
 {
     procentZaplaty = (k/m) + (k * ((p/100) / m));
 }
+//---------------------------------------------------------------------------------------------------------------
 
-function Wyswietl()
+function kwadrat()
 {
-    text = document.getElementById("Text").value;
-    ilosc = parseInt(document.getElementById("Ilosc").value)
+    let kwadratValue = parseInt(document.getElementById("Kwadrat").value);
+    console.log(typeof(kwadratValue))
 
-    for(var i =0; i < ilosc; i++)
+    for(var i = 0; i < kwadratValue; i++)
     {
-        alert(text);
+        for(var j = 0; j < kwadratValue; j++ )
+        {
+            document.write("*");
+        }
+        document.write("<br>")
     }
 }
 
-function Oblicz()
+function prostokat()
 {
-    let a = parseInt(document.getElementById("a").value);
-    let b = parseInt(document.getElementById("b").value);
-    var operacja = document.getElementsByName('Operacje');
-    var i = 0
+    let y = parseInt(document.getElementById("prostokatY").value)
+    let x = parseInt(document.getElementById("prostokatX").value)
 
-    for(var i = 0; i < operacja.length; i++)
+    for(var i = 0; i < y; i++)
     {
-        if(operacja[i].checked)
+        for(var j = 0; j < x; j++ )
         {
-           switch(operacja[i].value)
-           {
-                case "+":
-                    alert(a + b)
-                    break
-                case "-":
-                    alert(a - b)
-                    break
-                case "*":
-                    alert(a * b)
-                    break
-                case "/":
-                    if(b != 0)
-                    {
-                        alert(a / b);
-                    }
-                    else
-                    {
-                        alert("Nie dizleimy przez 0! Podaj Inną liczbę!");
-                    }
-                    break
-           }
+            document.write("*");
         }
-        else
-        {
-            i += 1
-        }
-    }
-
-    if(i == 4)
-    {
-        alert("Nie podałeś zadnej Operacji!");
+        document.write("<br>")
     }
 }
