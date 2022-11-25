@@ -54,13 +54,21 @@ function dodawanie()
     kolumnaPrzyciski.appendChild(przyciskSprzedaj);
     tr.appendChild(kolumnaPrzyciski);
 
-    if(iloscKolumna < 10 && iloscKolumna > 5)
+    if(iloscKolumna != 0)
     {
-        document.getElementById(`kolumnaIlosc${lp - 1}`).style.backgroundColor = "yellow"
+        if(iloscKolumna < 10 && iloscKolumna > 5)
+        {
+            document.getElementById(`kolumnaIlosc${lp - 1}`).style.backgroundColor = "yellow"
+        }
+        else if(iloscKolumna < 5)
+        {
+            document.getElementById(`kolumnaIlosc${lp - 1}`).style.backgroundColor = "red"
+        }
     }
-    else if(iloscKolumna < 5)
+    else
     {
         document.getElementById(`kolumnaIlosc${lp - 1}`).style.backgroundColor = "red"
+        document.getElementById(`kolumnaIlosc${lp - 1}`).innerHTML = "Brak Książki!";
     }
 
 
@@ -72,18 +80,25 @@ function kup(kid,id)
 
     i = parseInt(ilosc.innerHTML)
 
-    i = i - 1
+        if(i - 1 != 0)
+        {
+        i = i - 1
 
-    if(i < 10 && i > 5)
-    {
-        document.getElementById(kid).style.backgroundColor = "yellow"
-    }
-    else if(i < 5)
-    {
+        if(i < 10 && i > 5)
+        {
+            document.getElementById(kid).style.backgroundColor = "yellow"
+        }
+        else if(i < 5)
+        {
         document.getElementById(kid).style.backgroundColor = "red"
-    }
+        }
 
-    ilosc.innerHTML = i;
+        ilosc.innerHTML = i;
+        }
+        else
+        {
+            document.getElementById(kid).innerHTML = "Brak Książki!";
+        }
 }
 
 function sprzedaj(kid,id)
