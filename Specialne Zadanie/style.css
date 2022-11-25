@@ -1,0 +1,41 @@
+table
+{
+    display: flex;
+    flex-direction: column;
+}
+
+tr
+{
+    display: flex;
+    flex-direction: row;
+
+    width: 500px;
+    height: 40px;
+
+    background-color: aqua;
+}
+td
+{
+    display: flex;
+
+    width: calc(100%/4);
+    height: 100%;
+}
+td
+{
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-right: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-color: red;
+}
+td:not(:last-child)
+{
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-left: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-color: red;
+}
