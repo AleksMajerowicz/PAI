@@ -11,7 +11,7 @@ function tworzenie()
 
 
 
-function tworzenieObiektu()
+function tworzenieProstokacika()
 {
     const body = document.querySelector("body");
     let prosokacik = document.createElement("div");
@@ -19,10 +19,16 @@ function tworzenieObiektu()
     let szerokosc = parseInt(document.getElementById("szerokosc").value);
     let wysokosc = parseInt(document.getElementById("wysokosc").value);
     let kolor = document.getElementById("kolor").value;
+    let textColor = document.getElementById("kolorTekstu").value;
 
     prosokacik.innerHTML = zawartosc;
     prosokacik.style.width = szerokosc;
     prosokacik.style.height = wysokosc;
     prosokacik.style.backgroundColor = kolor;
+    prosokacik.style.color = textColor;
     body.appendChild(prosokacik);
+}
+function tworzenieObiektu()
+{
+
 }
