@@ -7,6 +7,10 @@
     </head>
 
     <body>
+        Tytul Ksiazki: <input type = "text" id = "podajTytul"><br>
+        Jej ilosc: <input type = "number" id = "podajIlosc"><br>
+        <button onclick="dodawanie()">Dodaj</button>
+
         <table>
             <tr><!--th-->
                 <td>Lp</td>
@@ -15,10 +19,10 @@
                 <td> Kup/sprzedaj</td>
             </tr>
             <tr>
-                <td>Lp</td>
-                <td>Tytuł</td>
-                <td>Ilosć</td>
-                <td> Kup/sprzedaj</td>
+                <td>1</td>
+                <td><p id = "tytul">Harry Potter</p></td>
+                <td><p id = "ilosc1">1</p></td>
+                <td> <button onclick="kup(1)">Kup</button> <button onclick="sprzedaj(1)">Sprzedaj</button></td>
             </tr>
         </table>
     </body>

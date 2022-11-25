@@ -23,6 +23,9 @@ td
 }
 td
 {
+    align-items: center;
+    justify-content: center;
+
     border-style: solid;
     border-bottom-width: 2px;
     border-right: 2px;
@@ -32,10 +35,18 @@ td
 }
 td:not(:last-child)
 {
+    align-items: center;
+    justify-content: center;
+    
     border-style: solid;
     border-bottom-width: 2px;
     border-left: 2px;
     border-top: 0px;
     border-left: 0px;
     border-color: red;
+}
+
+p
+{
+    text-align: center;
 }
