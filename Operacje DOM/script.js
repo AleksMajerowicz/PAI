@@ -14,12 +14,15 @@ function tworzenie()
 function tworzenieObiektu()
 {
     const body = document.querySelector("body");
-    body.addEventListener("input", e => {
-    e.preventDefault();
-    let prosokacik = null;
-    let zawartosc = document.getElementById("zawartosc");
-    let szerokosc = parseInt(document.getElementById("szerokosc"));
-    let wysokosc = parseInt(document.getElementById("wysokosc"));
-    let kolor = document.getElementById("kolor");
-    e.appendChild(prosokacik);})
+    let prosokacik = document.createElement("div");
+    let zawartosc = document.getElementById("zawartosc").value;
+    let szerokosc = parseInt(document.getElementById("szerokosc").value);
+    let wysokosc = parseInt(document.getElementById("wysokosc").value);
+    let kolor = document.getElementById("kolor").value;
+
+    prosokacik.innerHTML = zawartosc;
+    prosokacik.style.width = szerokosc;
+    prosokacik.style.height = wysokosc;
+    prosokacik.style.backgroundColor = kolor;
+    body.appendChild(prosokacik);
 }
