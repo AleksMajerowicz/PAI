@@ -4,7 +4,7 @@ function dodawanie()
     //Pobieranie Tytułu i ilości
     //--------------------------------------------------------------
     let tytulKolumna = document.getElementById("podajTytul").value;
-    let iloscKolumna = document.getElementById("podajIlosc").value;
+    let iloscKolumna = parseInt(document.getElementById("podajIlosc").value);
 
     //odwoływanie się do tbody i tworzenie tr
     //------------------------------------------------
@@ -32,9 +32,10 @@ function dodawanie()
     //Tworzenie Kolumny z Iloscia
     //------------------------------------------------------
     let kolumnaIlosc = document.createElement("td");
+    kolumnaIlosc.setAttribute("id",`kolumnaIlosc${lp - 1}`)
     let pIlosc = document.createElement("p");
     pIlosc.innerHTML = iloscKolumna;
-    pIlosc.setAttribute("id","ilosc" + String(lp - 1));
+    pIlosc.setAttribute("id",`ilosc${lp - 1}`);
     kolumnaIlosc.appendChild(pIlosc);
     tr.appendChild(kolumnaIlosc);
 
@@ -43,14 +44,71 @@ function dodawanie()
     let kolumnaPrzyciski = document.createElement("td");
     let przyciskKup = document.createElement("button")
     przyciskKup.innerHTML = "Kup"
-    przyciskKup.setAttribute("onclick","kup()")
+    przyciskKup.setAttribute("onclick",`kup('kolumnaIlosc${lp - 1}','ilosc${lp - 1}')`)
     let przyciskSprzedaj = document.createElement("button")
     przyciskSprzedaj.innerHTML = "Sprzedaj"
-    przyciskSprzedaj.setAttribute("onclick",'sprzedaj(})')
+    przyciskSprzedaj.setAttribute("onclick",`sprzedaj('kolumnaIlosc${lp - 1}','ilosc${lp - 1}')`)
 
     //Dodawanie ich
     kolumnaPrzyciski.appendChild(przyciskKup);
     kolumnaPrzyciski.appendChild(przyciskSprzedaj);
     tr.appendChild(kolumnaPrzyciski);
+
+    if(iloscKolumna < 10 && iloscKolumna > 5)
+    {
+        document.getElementById(`kolumnaIlosc${lp - 1}`).style.backgroundColor = "yellow"
+    }
+    else if(iloscKolumna < 5)
+    {
+        document.getElementById(`kolumnaIlosc${lp - 1}`).style.backgroundColor = "red"
+    }
+
+
+}
+
+function kup(kid,id)
+{
+    let ilosc = document.getElementById(id);
+
+    i = parseInt(ilosc.innerHTML)
+
+    i = i - 1
+
+    if(i < 10 && i > 5)
+    {
+        document.getElementById(kid).style.backgroundColor = "yellow"
+    }
+    else if(i < 5)
+    {
+        document.getElementById(kid).style.backgroundColor = "red"
+    }
+
+    ilosc.innerHTML = i;
+}
+
+function sprzedaj(kid,id)
+{
+    let ilosc = document.getElementById(id);
+
+    i = parseInt(ilosc.innerHTML)
+
+    i = i + 1
+
+    console.log(i);
+    if(i < 10 && i > 5)
+    {
+        document.getElementById(kid).style.backgroundColor = "yellow"
+    }
+    else if(i <= 5)
+    {
+        document.getElementById(kid).style.backgroundColor = "red"
+    }
+    else if(i >= 10)
+    {
+        console.log("t: "+i);
+        document.getElementById(kid).style.backgroundColor = "rgba(0,0,0,0)"
+    }
+
+    ilosc.innerHTML = i;
 }
 
