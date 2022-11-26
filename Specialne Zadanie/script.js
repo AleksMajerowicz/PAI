@@ -82,22 +82,22 @@ function kup(kid,id)
 
         if(i - 1 != 0)
         {
-        i = i - 1
+            i = i - 1
 
-        if(i < 10 && i > 5)
-        {
-            document.getElementById(kid).style.backgroundColor = "yellow"
-        }
-        else if(i < 5)
-        {
-        document.getElementById(kid).style.backgroundColor = "red"
-        }
+            if(i < 10 && i > 5)
+            {
+                document.getElementById(kid).style.backgroundColor = "yellow"
+            }
+            else if(i < 5)
+            {
+            document.getElementById(kid).style.backgroundColor = "red"
+            }
 
         ilosc.innerHTML = i;
         }
         else
         {
-            document.getElementById(kid).innerHTML = "Brak Książki!";
+            document.getElementById(id).innerHTML = "Brak Książki!";
         }
 }
 
@@ -105,11 +105,16 @@ function sprzedaj(kid,id)
 {
     let ilosc = document.getElementById(id);
 
-    i = parseInt(ilosc.innerHTML)
+   if(ilosc.innerHTML == "Brak Książki!")
+   {
+        i = 1;
+   }
+   else
+   {
+        i = parseInt(ilosc.innerHTML)
+        i = i + 1
+   }
 
-    i = i + 1
-
-    console.log(i);
     if(i < 10 && i > 5)
     {
         document.getElementById(kid).style.backgroundColor = "yellow"
@@ -120,7 +125,6 @@ function sprzedaj(kid,id)
     }
     else if(i >= 10)
     {
-        console.log("t: "+i);
         document.getElementById(kid).style.backgroundColor = "rgba(0,0,0,0)"
     }
 
