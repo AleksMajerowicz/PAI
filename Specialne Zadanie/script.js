@@ -78,8 +78,8 @@ function kup(kid,id)
 {
     let ilosc = document.getElementById(id);
 
-    i = parseInt(ilosc.innerHTML)
-
+    if(i != "Brak Książki!")
+    {
         if(i - 1 != 0)
         {
             i = i - 1
@@ -90,7 +90,7 @@ function kup(kid,id)
             }
             else if(i < 5)
             {
-            document.getElementById(kid).style.backgroundColor = "red"
+                document.getElementById(kid).style.backgroundColor = "red"
             }
 
         ilosc.innerHTML = i;
@@ -99,6 +99,7 @@ function kup(kid,id)
         {
             document.getElementById(id).innerHTML = "Brak Książki!";
         }
+    }
 }
 
 function sprzedaj(kid,id)

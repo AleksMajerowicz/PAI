@@ -1,0 +1,59 @@
+<script>
+    function changeColor(id,color)
+    {
+        let p = document.getElementById(id);
+        p.style.color = color;
+    }
+
+    function pogrubienie(id,textWidth)
+    {
+        let p = document.getElementById(id);
+        p.style.fontWeight = textWidth;
+    }
+
+    function format(id)
+    {
+        console.log("ok");
+        let p = document.getElementById(id);
+        p.style.color = "black";
+        p.style.fontWeight = "normal";
+    }
+
+    function kup()
+    {
+        let ilsocServerow = document.getElementById("iloscServerow");
+        var i = parseInt(ilsocServerow.innerHTML);
+        i = i + 1
+
+        ilsocServerow.innerHTML = i
+
+    }
+    function sprzedaj()
+    {
+        let ilsocServerow = document.getElementById("iloscServerow");
+        var i = parseInt(ilsocServerow.innerHTML);
+        if( i > 0)
+        {
+
+            i = i - 1
+
+            ilsocServerow.innerHTML = i
+        }
+    }
+</script>
+
+<p id = "I"> Test </p>
+<button onClick = "changeColor('I','red')">Kolor</button>
+<button onclick="pogrubienie('I','bold')">Pogrubienie</button>
+<button onclick="format('I')">Formatowanie</button>
+
+<p id = "II"> Test</p>
+<button onClick = "changeColor('II','green')">Kolor</button>
+<button onclick="pogrubienie('II','bold')">Pogrubienie</button>
+<button onclick="format('II')">Formatowanie</button>
+<hr>
+
+<div id = "serwery">Posiadasz serwerów:</div><br>
+<div id = "iloscServerow">0</div><br>
+<button onclick="kup()"> Kup </button> 
+<button onclick="sprzedaj()"> Sprzedaj</button>
