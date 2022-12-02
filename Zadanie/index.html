@@ -1,46 +1,6 @@
-<script>
-    function changeColor(id,color)
-    {
-        let p = document.getElementById(id);
-        p.style.color = color;
-    }
-
-    function pogrubienie(id,textWidth)
-    {
-        let p = document.getElementById(id);
-        p.style.fontWeight = textWidth;
-    }
-
-    function format(id)
-    {
-        console.log("ok");
-        let p = document.getElementById(id);
-        p.style.color = "black";
-        p.style.fontWeight = "normal";
-    }
-
-    function kup()
-    {
-        let ilsocServerow = document.getElementById("iloscServerow");
-        var i = parseInt(ilsocServerow.innerHTML);
-        i = i + 1
-
-        ilsocServerow.innerHTML = i
-
-    }
-    function sprzedaj()
-    {
-        let ilsocServerow = document.getElementById("iloscServerow");
-        var i = parseInt(ilsocServerow.innerHTML);
-        if( i > 0)
-        {
-
-            i = i - 1
-
-            ilsocServerow.innerHTML = i
-        }
-    }
-</script>
+<head>
+    <script type = "text/javascript" src = "script.js"></script>
+</head>
 
 <p id = "I"> Test </p>
 <button onClick = "changeColor('I','red')">Kolor</button>
@@ -56,4 +16,6 @@
 <div id = "serwery">Posiadasz serwerów:</div><br>
 <div id = "iloscServerow">0</div><br>
 <button onclick="kup()"> Kup </button> 
-<button onclick="sprzedaj()"> Sprzedaj</button>
+<button onclick="sprzedaj()"> Sprzedaj</button> <br>
+<button onclick="kupWiele()">Kup Wiele</button><br>
+<button onclick="sprzedajWiele()"> Sprzedaj Wiele</button>
