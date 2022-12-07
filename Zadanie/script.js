@@ -78,3 +78,45 @@ function sprzedajWiele()
 
     changeTextColor(parseInt(ilsocServerow.innerHTML),ilsocServerow);
 }
+
+function zwieksz()
+{
+    let p = document.getElementById("p");
+    console.log(p);
+
+    i = parseInt(p.innerHTML);
+    i = i + 1;
+
+    if(i < 10)
+    {
+        document.getElementById("zmiejsz").style.visibility = "hidden";
+    }
+    else if( i >= 10)
+    {
+        document.getElementById("zmiejsz").style.visibility = "inherit";     
+        document.getElementById("zwieksz").style.visibility = "hidden"; 
+    }
+
+    p.innerHTML = i;
+}
+
+function zmiejsz()
+{
+    let p = document.getElementById("p");
+    console.log(p);
+
+    i = parseInt(p.innerHTML)
+    i = i - 1;
+
+    if(i > 0)
+    {
+        document.getElementById("zwieksz").style.visibility = "hidden";
+    }
+    else if( i <= 0)
+    {
+        document.getElementById("zwieksz").style.visibility = "inherit";     
+        document.getElementById("zmiejsz").style.visibility = "hidden"; 
+    }
+
+    p.innerHTML = i;
+}
