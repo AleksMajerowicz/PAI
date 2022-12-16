@@ -68,7 +68,7 @@ function dodawanie()
     else
     {
         document.getElementById(`kolumnaIlosc${lp - 1}`).style.backgroundColor = "red"
-        document.getElementById(`kolumnaIlosc${lp - 1}`).innerHTML = "Brak Książki!";
+        document.getElementById(`ilosc${lp - 1}`).innerHTML = "Brak Książki!";
     }
 
 
@@ -78,8 +78,9 @@ function kup(kid,id)
 {
     let ilosc = document.getElementById(id);
 
-    if(i != "Brak Książki!")
+    if(ilosc.innerHTML != "Brak Książki!")
     {
+        i = parseInt(ilosc.innerHTML);
         if(i - 1 != 0)
         {
             i = i - 1
