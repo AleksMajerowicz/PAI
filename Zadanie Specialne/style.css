@@ -1,0 +1,88 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+hr
+{
+    width: 100%;
+}
+h1
+{
+    display: flex;
+
+    margin: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+img
+{
+    display: flex;
+}
+
+header
+{
+    display: flex;
+
+    width: 100%;
+    height: 30%;
+}
+
+header img
+{
+    width: 100%;
+    height: 100%;
+}
+
+main
+{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: aqua;
+}
+
+main #Formularz
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 15%;
+    height: 100%;
+
+    background-color: yellow;
+}
+main #TwojWybor
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 85%;
+    height: 100%;
+
+    background-color: gray;
+}
+main #TwojWybor img
+{
+    width: 75%;
+    height: 55%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+main #TwojWybor #Wycena
+{   
+    display: flex;
+    flex-direction: column;
+
+    width: 55%;
+    height: 45%;
+
+    margin-left: auto;
+
+    background-color: green;
+}
