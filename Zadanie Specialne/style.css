@@ -1,3 +1,4 @@
+/*----------------------Globalne-----------------------------*/
 body
 {
     display: flex;
@@ -20,7 +21,9 @@ img
 {
     display: flex;
 }
+/*---------------------------------------------------*/
 
+/*------------------------Header---------------------------*/
 header
 {
     display: flex;
@@ -34,7 +37,9 @@ header img
     width: 100%;
     height: 100%;
 }
+/*---------------------------------------------------*/
 
+/*-----------------------Main----------------------------*/
 main
 {
     display: flex;
@@ -46,6 +51,7 @@ main
     background-color: aqua;
 }
 
+/*-----------------------Main Formularz----------------------------*/
 main #Formularz
 {
     display: flex;
@@ -56,6 +62,17 @@ main #Formularz
 
     background-color: yellow;
 }
+main #Formularz section
+{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+/*---------------------------------------------------*/
+
+/*-----------------------Main Twój WYbór----------------------------*/
 main #TwojWybor
 {
     display: flex;
@@ -74,15 +91,69 @@ main #TwojWybor img
     margin-left: auto;
     margin-right: auto;
 }
+/*----------------------Main TwójWybó Wycena-----------------------------*/
 main #TwojWybor #Wycena
 {   
     display: flex;
     flex-direction: column;
+    justify-content: right;
 
     width: 55%;
     height: 45%;
 
-    margin-left: auto;
+    margin-left: 42%;
 
     background-color: green;
 }
+main #TwojWybor #Wycena p
+{
+    display: flex;
+    justify-content: right;
+    
+    width: 40%;
+
+    margin: 0;
+    margin-top: 10px;
+    margin-left: auto;
+
+    font-size: 2.5vh;
+
+    background-color: aliceblue;
+}
+main #TwojWybor #Wycena div
+{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 10%;
+
+    margin-top: 10px;
+
+    background-color: violet;
+}
+main #TwojWybor #Wycena div #NapisSumy
+{
+    display: flex;
+
+    width: 30%;
+    height: 100%;
+
+    margin: 0;
+    margin-left: auto;
+}
+main #TwojWybor #Wycena div #Suma
+{
+    display: flex;
+    justify-content: left;
+
+    width: 12%;
+    height: 100%;
+
+    margin: 0;
+}
+/*---------------------------------------------------*/
+
+/*---------------------------------------------------*/
+
+/*---------------------------------------------------*/
