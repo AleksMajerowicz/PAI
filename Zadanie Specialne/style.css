@@ -47,8 +47,6 @@ main
 
     width: 100%;
     height: 100%;
-
-    background-color: aqua;
 }
 
 /*-----------------------Main Formularz----------------------------*/
@@ -102,23 +100,20 @@ main #TwojWybor #Wycena
     height: 45%;
 
     margin-left: 42%;
-
-    background-color: green;
 }
 main #TwojWybor #Wycena p
 {
     display: flex;
     justify-content: right;
     
-    width: 40%;
+    width: 100%;
 
     margin: 0;
     margin-top: 10px;
-    margin-left: auto;
 
     font-size: 2.5vh;
 
-    background-color: aliceblue;
+    text-justify: right;
 }
 main #TwojWybor #Wycena div
 {
@@ -129,14 +124,12 @@ main #TwojWybor #Wycena div
     height: 10%;
 
     margin-top: 10px;
-
-    background-color: violet;
 }
 main #TwojWybor #Wycena div #NapisSumy
 {
     display: flex;
 
-    width: 30%;
+    width: 28%;
     height: 100%;
 
     margin: 0;
@@ -147,10 +140,17 @@ main #TwojWybor #Wycena div #Suma
     display: flex;
     justify-content: left;
 
-    width: 12%;
+    width: 50%;
     height: 100%;
 
     margin: 0;
+}
+main #TwojWybor #Wycena div #Kreska
+{
+    display: flex;
+
+    width: 100%;
+    height: 5px;
 }
 /*---------------------------------------------------*/
 

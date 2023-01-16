@@ -3,9 +3,10 @@
         <meta charset="utf-8">
 
         <link rel = "stylesheet" type = "text/css" href = "style.css"></link>
+        <script src="./script.js"></script>
     </head>
 
-    <body>
+    <body onload="ustawienie()">
         <header>
             <img src = "zdjecia/baner.jpg">
         </header>
@@ -13,47 +14,46 @@
         <main>
             <section id = "Formularz">
                 <h1>Kolor</h1>
-                <select>
-                    <option value = "Szary" name = "Kolory">Szary</option>
-                    <option value = "Niebieski" name = "Kolory">Niebieski</option>
-                    <option value = "Czerwony" name = "Kolory">Czerwony</option>
-                    <option value = "Żółty" name = "Kolory">Żółty</option>
-                    <option value = "Zielony" name = "Kolory">Zielony</option>
+                <select id = "Lakier" onchange="lakier()">
+                    <option value = "szary" name = "Kolory">Szary</option>
+                    <option value = "niebieski" name = "Kolory">Niebieski</option>
+                    <option value = "czerwony" name = "Kolory">Czerwony</option>
+                    <option value = "zolty" name = "Kolory">Żółty</option>
+                    <option value = "zielony" name = "Kolory">Zielony</option>
                 </select>
                 <hr>
                 <h1>Felgi</h1>
                 <section>
-                    Stalowe<input type = "radio" value = "Stalowe" name = "Felgi">
+                    Stalowe<input type = "radio" value = "Stalowe" name = "Felgi" onchange="felgi()">
                 </section>
                 <section>
-                    Aluminiowe<input type = "radio" value = "Aluminiowe" name = "Felgi">
+                    Aluminiowe<input type = "radio" value = "Aluminiowe" name = "Felgi" onchange="felgi()">
                 </section>
                 <hr>
                 <h1>Wyposażenie</h1>
                 <section>
-                    Czujniki Parkowania<input type = "checkbox" value = "Stalowe" name = "Wyposazenie">
+                    Czujniki Parkowania<input type = "checkbox" value = "Stalowe" name = "Wyposazenie" onchange="wyposazenie()">
                 </section>
                 <section>
-                    Klimatyzacja<input type = "checkbox" value = "Aluminiowe" name = "Wyposazenie">
+                    Klimatyzacja<input type = "checkbox" value = "Aluminiowe" name = "Wyposazenie" onchange="wyposazenie()">
                 </section>
                 <section>
-                    Nawigacja<input type = "checkbox" value = "Stalowe" name = "Wyposazenie">
+                    Nawigacja<input type = "checkbox" value = "Stalowe" name = "Wyposazenie" onchange="wyposazenie()">
                 </section>
             </section>
             <section id = "TwojWybor">
                 <h1>Twój Samochód</h1>
-                <img src = "zdjecia/szary.png">
+                <img src = "zdjecia/szary.png" id = "zdjecieSamochodu">
                 <h1>Wycena</h1>
                 <div id = "Wycena">
                     <p>Cena Bazowa: 7500 zł</p>
-                    <p>Lakier: 9000 zł</p>
-                    <p>Felgi Aluminiowe: 7000 zł</p>
-                    <p>Czujniki Parkowania: 6500 zł</p>
-                    <p>Climatonic: 8500 zł</p>
-                    <p>Nawigacja: 5000 zł</p>
-                    <div>
-                        <p id = "NapisSumy">RAZEM: </p><p id = "Suma">169 500 zł</p>
-                    </div>
+                    <p id = "LakierCena">Lakier: 9000 zł</p>
+                    <p id = "FelgiCena">Felgi Aluminiowe: 7000 zł</p>
+                    <p id = "CzujnikiCena">Czujniki Parkowania: 6500 zł</p>
+                    <p id = "ClimatonicCena">Climatonic: 8500 zł</p>
+                    <p id = "NawigacjaCena">Nawigacja: 5000 zł</p>
+                    <hr id = "Kreska">
+                    <p id = "NapisSumy">RAZEM: </p>
                 </div>
             </section>
         </main>
