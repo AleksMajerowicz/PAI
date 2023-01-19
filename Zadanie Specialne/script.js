@@ -1,14 +1,6 @@
 var czyPierwszy = false;
 var wartosc = 7500;
 
-function ostatniaModyfikacja()
-{
-
-    let p = document.getElementById("ostatniamodyfikacja");
-
-    p.innerHTML = "Last Modify: " + document.lastModified;
-}
-
 function sprawdzanie()
 {
     var list = [document.getElementById("LakierCena"),
@@ -38,8 +30,6 @@ function sprawdzanie()
         document.getElementById("NapisSumy").style.display = "flex";
         document.getElementById("NapisSumy").innerHTML = `RAZEM: ${wartosc}zł`
     }
-
-    ostatniaModyfikacja();
 }
 
 function ustawienie()
@@ -51,6 +41,10 @@ function ustawienie()
     document.getElementById("NawigacjaCena").style.display = "none"
     document.getElementById("NapisSumy").style.display = "none"
     document.getElementById("Kreska").style.display = "none"
+
+    let p = document.getElementById("ostatniamodyfikacja");
+
+    p.innerHTML = "Last Modify: " + document.lastModified;
 }
 
 function lakier()
@@ -73,8 +67,6 @@ function lakier()
         wartosc += 9000    
         sprawdzanie();        
     }
-
-    ostatniaModyfikacja()
 }
 
 function felgi()
@@ -101,8 +93,6 @@ function felgi()
             }
         }
     }
-
-    ostatniaModyfikacja()
 }
 
 var listazazancoznychAkcesori = [false,false,false]
@@ -133,6 +123,4 @@ function wyposazenie()
             sprawdzanie();
         }
     }
-
-    ostatniaModyfikacja()
 }

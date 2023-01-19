@@ -39,6 +39,18 @@ header img
 }
 /*---------------------------------------------------*/
 
+/*-----------------------body section----------------------------*/
+
+body section
+{
+    width: 80%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*----------------------------------------------------------------*/
+
 /*-----------------------Main----------------------------*/
 main
 {
@@ -80,6 +92,10 @@ main #TwojWybor
     height: 100%;
 
     background-color: gray;
+}
+main #TwojWybor h1
+{
+    font-size: 2vw;
 }
 main #TwojWybor img
 {
