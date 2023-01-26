@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type = "text/javascript" src = "script.js">
+        </script>
+    </head>
+
+    <body>
+        <form>
+            <legend> Checkbox</legend>
+            <input type="checkbox" value = "Test"/> Test
+            <input type="checkbox" value = "Test"/> Test
+            <input type="checkbox" value = "Test"/> Test
+        </form>
+
+        <form>
+            <legend> Select</legend>
+            <select id = "ssaki">
+                <option value="test" name = "test"> Test</option>
+                <option value="test1" name = "test"> Test1</option>
+                <option value="test2" name = "test"> Test2</option>
+            </select>
+        </form>
+
+        <form>
+            Login <input type = "text" id = "Login"> 
+            Haslo <input type = "password" id = "Haslo">
+        </form>
+
+        <button onclick="logowanie()"> Zaloguj</button> <br>
+        Login: <div id = "login"></div><br>
+        Hasło: <div id = "haslo"></div><br>
+        <br>
+
+        <form>
+            <legend> Koty</legend>
+            <br>
+            Czy masz Kota?
+            <select id = "Pytanie">
+                <option value="Tak" name="Pytania"> Tak </option> 
+                <option value="Nie" name = "Pytania"> Nie </option> 
+            </select>
+            <br>
+
+            Jak nazwałeś/byś nazwał Kota? <input type = "text" id = "imie"> <br>
+
+            Wybierz Rasę: <br>
+            <input type="radio" value="Maine Coon" name = "rasa"> Maine Coon <br>
+
+            Wybierz Zdolności: <br>
+            <input type = "checkbox" value = "Super Skok" name = "Zdolnosci"> Super Skok <br>
+            <input type = "checkbox" value = "Super Słuch" name = "Zdolnosci"> Super Słuch <br>
+            <input type = "checkbox" value = "Super Miauczenie" name = "Zdolnosci"> Super Miauczenie <br>
+
+        </form>
+
+        <button onclick="writeFormularz()"> Wyślij</button> <br>
+        Czy masz Kota?: <div id = "pytanie1"></div>
+        Imie Kota: <div id = "pytanie2"></div>
+        Rasa Kota: <div id = "pytanie3"></div>
+        Zdolności Kota: <div id = "pytanie4"></div>
+    </body>
+</html>

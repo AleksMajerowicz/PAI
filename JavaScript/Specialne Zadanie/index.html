@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel = "stylesheet" type = "text/css" href = "style.css">
+        <script type = "text/javascript" src = "script.js">
+        </script>
+    </head>
+
+    <body>
+        Tytul Ksiazki: <input type = "text" id = "podajTytul"><br>
+        Jej ilosc: <input type = "number" id = "podajIlosc"><br>
+        <button onclick="dodawanie()">Dodaj</button>
+
+        <table>
+            <tr><!--th-->
+                <td>Lp</td>
+                <td>Tytuł</td>
+                <td>Ilosć</td>
+                <td> Kup/sprzedaj</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><p id = "tytul">Harry Potter</p></td>
+                <td id = "kolumnaIlosc1"><p id = "ilosc1">1</p></td>
+                <td> <button onclick="kup('kolumnaIlosc1','ilosc1')">Kup</button> <button onclick="sprzedaj('kolumnaIlosc1','ilosc1')">Sprzedaj</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
