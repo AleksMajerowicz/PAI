@@ -21,14 +21,17 @@ for($i = 0; $i < 20; $i++)
     {
         $liczbyPodzeileprzez4++;
     }
-    if($tab[$i] % 8 == 0)
+    for($j = 9; $j < $tab[$i]; $j++)
     {
-        $liczbyPodzeileprzez8++;
+        if($tab[$i] % $j == 0)
+        {
+            $liczbyPodzeileprzez8++;
+        }
     }
 }
 echo "Suma: $suma <br>";
 echo "Liczby Podzielne przez 4: $liczbyPodzeileprzez4 <br>";
-echo "Liczby Podzilene Przez 8: $liczbyPodzeileprzez8 <br>";
+echo "Liczby Podzilene Przez Większa Licze niż 8: $liczbyPodzeileprzez8 <br>";
 echo "<hr>";
 
 $liczba = rand(100,200);
