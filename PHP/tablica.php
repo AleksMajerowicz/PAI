@@ -10,7 +10,7 @@
     $zwierzeta["Mrówka"] = "Ant";
     $zwierzeta["Wąż"] = "Snake";
 
-    foreach($animal as $zwierzeta)
+    foreach($zwierzeta as $animal)
     {
         echo "$animal <br>";
     }
