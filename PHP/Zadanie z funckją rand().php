@@ -21,17 +21,21 @@ for($i = 0; $i < 20; $i++)
     {
         $liczbyPodzeileprzez4++;
     }
-    for($j = 9; $j < $tab[$i]; $j++)
+    if($tab[$i] > 8)
     {
-        if($tab[$i] % $j == 0)
+        $liczbyPodzeileprzez8++;
+    }
+    /*for($j = 9; $j < $tab[$i]; $j++)
+    {
+        if($tab[$i] %$j == 0)
         {
             $liczbyPodzeileprzez8++;
         }
-    }
+    }*/
 }
 echo "Suma: $suma <br>";
 echo "Liczby Podzielne przez 4: $liczbyPodzeileprzez4 <br>";
-echo "Liczby Podzilene Przez Większa Licze niż 8: $liczbyPodzeileprzez8 <br>";
+echo "Liczb wiekszych od 8 jest: $liczbyPodzeileprzez8 <br>";
 echo "<hr>";
 
 $liczba = rand(100,200);
@@ -51,4 +55,25 @@ while($aktualnaliczba < $liczba)
     }
     $aktualnaliczba++;
 }
+echo "<hr>";
+$maks = rand(0,100);
+$aktualnaliczba = 3;
+$aktualnyDzielnik = 2;
+$najwieksza = 0;
+
+while($aktualnaliczba <= $maks)
+{
+    echo "$aktualnaliczba <br>";
+    while($aktualnyDzielnik <= $aktualnaliczba)
+    {
+        if($aktualnaliczba % $aktualnyDzielnik == 0 && $aktualnyDzielnik == $aktualnaliczba)
+        {
+            $najwieksza = $aktualnaliczba;
+        }
+        $aktualnyDzielnik++;
+    }
+    $aktualnyDzielnik = 2;
+    $aktualnaliczba++;
+}
+echo "Najwięskza liczba Pierwsza to: $najwieksza"
 ?>
