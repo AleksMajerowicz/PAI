@@ -8,9 +8,9 @@ function wyswietl20Gwiazdek()
     }
 }
 
-function wyswietlWiersz(int $dlugosc)
+function wyswietlWiersz(int $n)
 {
-    for($i = 0; $i < $dlugosc; $i++)
+    for($i = 0; $i < $n; $i++)
     {
         echo "*";
     }
@@ -22,9 +22,9 @@ function obliczVat(int $cenaNetto, $stawkaVAT)
 }
 wyswietl20Gwiazdek();
 echo "<br>";
-wyswietlWiersz(3000);
+wyswietlWiersz(30);
 echo "<br>";
-$cenaBrutto = obliczVAT(30,0.2);
-echo $cenaBrutto;
+$cenaBrutto = obliczVAT(100,0.23);
+echo "Cena Brutto = $cenaBrutto";
 
 ?>
