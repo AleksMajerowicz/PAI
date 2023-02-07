@@ -22,9 +22,14 @@ function wyswietlWiersz(int $n)
     }
 }
 
-function obliczVat(int $cenaNetto, $stawkaVAT)
+function obliczVat(int $cenaNetto, $stawkaVAT = 0.23)
 {
     return $cenaNetto+ ($cenaNetto * $stawkaVAT);
+}
+
+function iloscPierwiastkow(int $a,int $b,int $c)
+{
+    return $b**2 + (-4 * $a * $c);
 }
 wyswietl20Gwiazdek("'");
 echo "<br>";
@@ -32,5 +37,9 @@ wyswietlWiersz(30);
 echo "<br>";
 $cenaBrutto = obliczVAT(100,0.23);
 echo "Cena Brutto = $cenaBrutto";
+$delta = iloscPierwiastkow(1,2,-3);
+echo "<br>";
+echo "$delta";
+
 
 ?>
