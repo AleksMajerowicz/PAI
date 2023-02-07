@@ -1,10 +1,16 @@
 <?php
 
-function wyswietl20Gwiazdek()
+function wyswietl20Gwiazdek($znak)
 {
-    for($i = 0; $i < 20; $i++)
+    $x = rand(1,50);
+    $y = rand(1,50);
+    for($i = 0; $i < $x; $i++)
     {
-        echo "*";
+        for($j = 0; $j < $x; $j++)
+        {
+            echo "$znak";
+        }
+        echo "<br>";
     }
 }
 
@@ -20,7 +26,7 @@ function obliczVat(int $cenaNetto, $stawkaVAT)
 {
     return $cenaNetto+ ($cenaNetto * $stawkaVAT);
 }
-wyswietl20Gwiazdek();
+wyswietl20Gwiazdek("'");
 echo "<br>";
 wyswietlWiersz(30);
 echo "<br>";
